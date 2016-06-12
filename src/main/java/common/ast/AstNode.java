@@ -2,19 +2,10 @@ package common.ast;
 
 import java.util.List;
 
-public class AstNode {
-	private String name;
+public abstract class AstNode {
 	private List<AstNode> children;
 	private AstNode parent;
 	private Interval sourceInterval;
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
 
 	public List<AstNode> getChildren() {
 		return children;
@@ -39,5 +30,5 @@ public class AstNode {
 	public void setSourceInterval(Interval sourceInterval) {
 		this.sourceInterval = sourceInterval;
 	}
-
+	
 }
