@@ -4,8 +4,9 @@ import java.util.List;
 
 public abstract class AstNode {
 	private List<AstNode> children;
-	private AstNode parent;
+	private transient AstNode parent;
 	private Interval sourceInterval;
+	private String name;
 
 	public List<AstNode> getChildren() {
 		return children;
@@ -29,6 +30,14 @@ public abstract class AstNode {
 
 	public void setSourceInterval(Interval sourceInterval) {
 		this.sourceInterval = sourceInterval;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 }
