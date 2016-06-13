@@ -15,6 +15,14 @@ public abstract class AstNode {
 	public void setChildren(List<AstNode> children) {
 		this.children = children;
 	}
+	
+	public int getChildCount(){
+		if(children==null){
+			return 0;
+		}else {
+			return children.size();
+		}
+	}
 
 	public AstNode getParent() {
 		return parent;
