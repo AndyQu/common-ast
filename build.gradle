@@ -2,8 +2,9 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
+compileJava.options.encoding = 'UTF-8'
 
-sourceCompatibility = 1.5
+sourceCompatibility = 1.8
 group='org.zju.ast'
 //name='common-ast'
 version = '1.0'
